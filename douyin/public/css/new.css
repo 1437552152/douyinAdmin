@@ -1,0 +1,33 @@
+.showNews .title {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+    margin: 10px 0 10px;
+}
+
+.showNews .mark {
+    color: #999;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+.showNews .mark span {
+    margin: 0 10px;
+    font-size: 12px;
+}
+.showNews{margin-top: 70px;margin-bottom: 100px;}
+.link {
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+.nextpage p {
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+.nextpage a {
+   /*  color: #d70d19; */
+}

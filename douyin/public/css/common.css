@@ -1,0 +1,123 @@
+@charset "UTF-8";html {
+    font-size: 62.5%;
+    font-family: helvetica neue,tahoma,arial,hiragino sans gb,simsun,sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    -moz-user-select:none; /* Firefox私有属性 */
+       
+     -webkit-user-select:none; /* WebKit内核私有属性 */
+      
+      -ms-user-select:none; /* IE私有属性(IE10及以后) */
+     
+       -khtml-user-select:none; /* KHTML内核私有属性 */
+      
+      -o-user-select:none; /* Opera私有属性 */
+      
+      user-select:none; /* CSS3属性 */
+    }
+
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td,hr {
+    margin: 0;
+    padding: 0
+}
+
+.navigation-v3>ul>li ul{
+    display:none
+}
+
+.navigation-v3>ul>li[_t_nav="solution"]
+{
+ position:relative;
+}
+
+.navigation-v3>ul>li[_t_nav="solution"]:hover ul{
+display:block
+}
+.navigation-v3>ul>li[_t_nav="solution"] ul
+{
+    position: absolute;
+    background-color:#fff;
+}
+
+.navigation-v3>ul>li[_t_nav="solution"] ul li:first-child
+{
+    border-bottom: 1px dashed #eee;
+}
+
+.navigation-v3>ul>li[_t_nav="solution"] ul li a
+{
+    color: #333;
+}
+.navigation-v3>ul>li[_t_nav="solution"] ul li a:hover
+{
+    color: #d70d19;
+}
+
+
+body {
+    line-height: 1.333;
+    font-size: 12px
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+    font-family: arial,hiragino sans gb,microsoft yahei,simsun,sans-serif
+}
+img{max-width:100%}
+
+
+li {
+    list-style: none
+}
+
+a:link,a:visited {
+    text-decoration: none
+}
+.clearfix{clear: both;}
+/*滚动条颜色*/
+/* 设置滚动条的样式 */
+        ::-webkit-scrollbar {
+        width:8px;
+        background-color: #f9f9fc;
+        }
+
+        /* 滚动槽 */
+        ::-webkit-scrollbar-track {
+        border-radius:4px;
+        }
+
+        /* 滚动条滑块 */
+        ::-webkit-scrollbar-thumb {
+        border-radius:4px;
+        background:#d70d19;
+        }
+        
+#myNav{position: fixed;
+    top: 200px;
+    left: 20px;
+    z-index: 99999;}
+#myScrollspy li{margin-top: 20px;}
+#myScrollspy .line{width: 1px;
+    height: 243px;
+    background-color: #d70d19;
+    position: fixed;
+    top: 252px;
+    left: 40px;
+    z-index: 99;}
+#myNav li div{ padding-left: 38px;
+    padding-right: 17px;
+    color: #fff;min-width: 113px;
+    background-color: #d70d19;
+    text-align: center;
+    height:25px;
+    border-radius: 17px;
+    margin-top: -35px;
+    margin-left: 11px;
+    font-size: 16px;
+    visibility: hidden;
+    padding-top: 5px;}
+#myNav li:hover div{visibility: visible;}

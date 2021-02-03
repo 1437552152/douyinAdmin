@@ -89,7 +89,7 @@ module.exports = merge(webpackBaseConfig, {
       ]
     }),
     new HtmlWebpackPlugin({
-      title: '后台管理',
+      title: '西瓜数据',
       favicon: './favicon.ico',
       filename: '../index.html',
       template: './src/template/index.ejs',

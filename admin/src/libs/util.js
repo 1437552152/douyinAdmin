@@ -7,7 +7,7 @@ let util = {
 
 };
 util.title = function (title) {
-    title = title || '后台管理';
+    title = title || '西瓜数据';
     window.document.title = title;
 };
 

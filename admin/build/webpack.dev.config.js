@@ -34,7 +34,7 @@ module.exports = merge(webpackBaseConfig, {
       minChunks: Infinity
     }),
     new HtmlWebpackPlugin({
-      title: '后台管理',
+      title: '西瓜数据',
       filename: '../index.html',
       template: './src/template/index.ejs',
       favicon: './favicon.ico',

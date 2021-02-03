@@ -3,7 +3,7 @@
  * @version:
  * @Date: 2019-07-31 19:53:22
  * @LastEditors: yfye
- * @LastEditTime: 2021-01-24 19:25:15
+ * @LastEditTime: 2021-01-25 22:14:12
  * @Author: yeyifu
  * @LastModifiedBy: yeyifu
  */
@@ -17,7 +17,7 @@ export const loginRouter = {
     path: '/login',
     name: 'login',
     meta: {
-        title: 'Login - 登录'
+        title: '西瓜数据'
     },
     component: resolve => {
         require(['@/views/login.vue'], resolve);
@@ -28,7 +28,7 @@ export const lookTVRouter = {
     path: '/lookTV',
     name: 'lookTV',
     meta: {
-        title: 'lookTV'
+        title: '西瓜数据'
     },
     component: resolve => {
         require(['@/views/lookTV.vue'], resolve);

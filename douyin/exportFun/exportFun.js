@@ -2,8 +2,8 @@
  * @Description: 
  * @version: 
  * @Date: 2019-07-31 20:27:57
- * @LastEditors: yeyifu
- * @LastEditTime: 2019-09-25 21:31:44
+ * @LastEditors: yfye
+ * @LastEditTime: 2021-01-25 22:43:33
  * @Author: yeyifu
  * @LastModifiedBy: yeyifu
  */
@@ -12,6 +12,7 @@ const jwt = require('jsonwebtoken'); //用来生成token
 const formaDate = require("../utils/date.js");
 const multer = require("multer");
 const db = require("../conf/conf.js");
+const moment =require('moment');
 
 // 接口请求拦截
 const  intercept=(req, res, next)=>{
@@ -54,13 +55,11 @@ const getdata=(params)=> {
   }));
 }
 
-
 //获取当前时间
 const formatDate=()=>{
   //把时间戳转化为日期对象
-  let date = new Date();
   //调用封装，参数为日期对象和时间格式
-  return formaDate.formaDate(date, "yyyy-MM-dd hh:mm");
+  return   moment().format("YYYY-MM-DD HH:mm:ss")
 }
 
 //图片上传

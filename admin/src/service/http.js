@@ -13,10 +13,10 @@ const {
     environment
 } = process.env;
 
-/* export const Host =
-  environment === 'production' ? 'http://localhost:8090/' : 'http://localhost:8090/'; */
+export const Host =
+  environment === 'production' ? 'http://localhost:8090/' : 'http://localhost:8090/';
 /* export const Host = environment === 'production' ? 'http://47.107.180.202:9091/' : 'http://47.107.180.202:9091/'; */
-export const Host = environment === 'production' ? 'http://121.204.249.95:8090/' : 'http://121.204.249.95:8090/';
+/* export const Host = environment === 'production' ? 'http://121.204.249.95:8090/' : 'http://121.204.249.95:8090/'; */
 axios.defaults.baseURL = Host;
 export const fetch = (url, params = {}) => {
     return new Promise((resolve, reject) => {

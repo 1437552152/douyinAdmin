@@ -2,8 +2,8 @@
  * @Description:
  * @version:
  * @Date: 2019-08-14 21:29:11
- * @LastEditors: yeyifu
- * @LastEditTime: 2019-08-22 22:52:18
+ * @LastEditors: yfye
+ * @LastEditTime: 2021-02-03 20:48:14
  * @Author: yeyifu
  * @LastModifiedBy: yeyifu
  */
@@ -91,14 +91,14 @@ const getUUidList = (req, res) => {
   if (secretid !== "" && secretid !== undefined && secretid != null) {
     sql = `SELECT COUNT(*) FROM  SecretIds where isShow=0 and secretid Like '%${secretid}%'`;
     sql2 =
-      `SELECT * FROM  SecretIds  where isShow=0 and secretid Like '%${secretid}%'  limit` +
+      `SELECT * FROM  SecretIds  where isShow=0 and secretid Like '%${secretid}%' order by  status desc,createTime desc limit` +
       " " +
       (pageNo - 1) * pageSize +
       "," + pageSize;
   } else {
     sql = `SELECT COUNT(*) FROM  SecretIds where isShow=0`;
     sql2 =
-      `SELECT * FROM  SecretIds  where isShow=0 limit` +
+      `SELECT * FROM  SecretIds  where isShow=0   order by  status desc,createTime desc limit` +
       " " +
       (pageNo - 1) * pageSize +
       "," +pageSize;

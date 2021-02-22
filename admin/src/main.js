@@ -3,7 +3,7 @@
  * @version: 111
  * @Date: 2019-07-31 19:53:22
  * @LastEditors: yfye
- * @LastEditTime: 2021-01-22 23:37:48
+ * @LastEditTime: 2021-02-03 20:14:05
  * @Author: yeyifu
  * @LastModifiedBy: yeyifu
  */
@@ -28,6 +28,7 @@ import Api from '@/config/api';
 import Cookies from 'js-cookie';
 import Viser from 'viser-vue';
 import base from '@/libs/base';
+import VueClipboard from 'vue-clipboard2'
 // 文本编辑器的使用
 /* import VueQuillEditor from 'vue-quill-editor';
 import 'quill/dist/quill.core.css';
@@ -99,7 +100,7 @@ Vue.use(VueI18n);
 Vue.use(iView);
 Vue.use(Viser);
 Vue.use(base);
-
+Vue.use(VueClipboard)
 new Vue({
     el: '#app',
     router: router,

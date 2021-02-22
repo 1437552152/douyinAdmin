@@ -3,7 +3,7 @@
  * @version: 
  * @Date: 2019-08-20 00:29:22
  * @LastEditors: yfye
- * @LastEditTime: 2021-01-18 23:54:54
+ * @LastEditTime: 2021-02-03 20:50:42
  * @Author: yeyifu
  * @LastModifiedBy: yeyifu
  -->
@@ -114,6 +114,10 @@ export default {
           key: "Nstatus"
         },
         {
+          title: "卡密种类",
+          key: "type"
+        },
+        {
           title: "创建时间",
           key: "ctime"
         },
@@ -128,6 +132,7 @@ export default {
           render: (h, obj) => {
             // 状态是否启用   0未启用  1开始启用    2已过期    3被禁用
             let text = "查看 / 编辑";
+            let secretid=obj.row.secretid;
             let arr = [
               h(
                 "Button",
@@ -148,7 +153,34 @@ export default {
                   }
                 },
                 "充值"
-              )
+              ),
+              h(
+                "Button",
+                {
+                  props: {
+                    type: "error",
+                    size: "small",                 
+                  },
+                  style: {
+                    marginRight: "5px"
+                  },
+                  on: {
+                    click: () => {                   
+                      this.$copyText(`${secretid}`).then(
+                        res => {
+                          console.log(res)
+                          this.$Message.info("已成功复制");
+                        },
+                        err => {
+                        this.$Message.info("复制失败");
+                        }
+                      )	              
+                    }
+                  }
+                },
+                "复制"
+              ),
+
             ];
             if (obj.row.status == 0) {
               text = "删除";
